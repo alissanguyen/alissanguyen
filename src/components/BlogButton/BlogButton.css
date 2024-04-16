@@ -1,0 +1,29 @@
+
+.BlogButton__Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.BlogButton {
+    padding: 15px 30px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    font-weight: 600;
+}
+  
+.BlogButton:hover {
+    background-position: right center; /* change the direction of the change here */
+  }
+  
+.BlogButton {
+    background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+}
+  
