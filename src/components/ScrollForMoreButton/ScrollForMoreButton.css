@@ -1,0 +1,16 @@
+#text,
+#letter,
+#pathTextCurved {
+  pointer-events: none;
+}
+
+#letter {
+  text-anchor: middle;
+  alignment-baseline: central;
+  font-size: 60px;
+}
+
+#textCurved {
+  font-weight: 300;
+  text-transform: uppercase;
+}
