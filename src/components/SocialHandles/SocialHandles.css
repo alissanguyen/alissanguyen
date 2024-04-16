@@ -1,0 +1,83 @@
+/* variables */
+:root {
+  --basic-dark-color: #737278;
+  --basic-light-color: #101010;
+  --border-radius: 50%;
+  --font-size: 25px;
+}
+
+.effect {
+  width: 100%;
+}
+
+.effect .buttons {
+  /* margin-top: 50px; */
+  display: flex;
+  gap: 20px;
+}
+
+/* styles for a common effect !!!YOU NEED THEM */
+.effect a {
+  text-decoration: none !important;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size);
+  overflow: hidden;
+  position: relative;
+  color: var(--basic-dark-color);
+  border: 2px solid var(--basic-dark-color);
+}
+
+.effect a:last-child {
+  margin-right: 0px;
+}
+
+.effect a:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.effect a i {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.effect svg {
+    z-index: 4;
+}
+
+/* varrius effect */
+.effect.varrius a {
+  transition: all 0.2s linear 0s;
+}
+
+.effect.varrius a:after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 90%;
+  top: -110%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  background-color: var(--basic-dark-color);
+  border-radius: var(--border-radius);
+}
+
+.effect.varrius a:hover {
+  color: var(--basic-light-color) !important;
+}
+  
+.effect.varrius a:hover:after {
+  top: 5%;
+  transition: all 0.2s linear 0s;
+}
+
