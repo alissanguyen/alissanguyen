@@ -1,0 +1,35 @@
+
+/* And from the left */
+.slide:hover,
+.slide:focus {
+  box-shadow: inset 16em 0 0 0 var(--hover);
+}
+
+/* Set button colors */
+.slide {
+  --color: #f5d864;
+  --hover: #f5d864;
+}
+
+
+.ResumeButton__Wrapper button {
+  color: var(--color);
+  transition: 0.35s;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.ResumeButton__Wrapper button:hover,
+.ResumeButton__Wrapper button:focus {
+  border-color: var(--hover);
+  color: #000000;
+  
+}
+
+/* Pen styling, ignore */
+.ResumeButton__Wrapper button {
+  background: none;
+  border: 2px solid;
+  border-radius: 30px;
+  line-height: 1;
+  padding: 1em 2em;
+}
