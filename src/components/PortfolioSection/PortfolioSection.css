@@ -1,0 +1,25 @@
+.ProjectCard__Wrapper {
+    position: relative;
+    
+}
+
+.ProjectCard__Image {
+    z-index: 2;
+    filter: brightness(50%);
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-image: linear-gradient(to bottom, transparent 0%, rgba(#000, 0.6) 100%);
+    background-blend-mode: overlay;
+}
+
+.ProjectCard__Image:hover {
+    filter: brightness(70%);
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.ProjectCard__Description {
+    z-index: 5;
+    position: absolute;
+    color: white;
+    bottom: 0;
+    padding: 20px;
+}
