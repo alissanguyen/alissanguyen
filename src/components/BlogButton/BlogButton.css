@@ -1,12 +1,3 @@
-
-.BlogButton__Container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-}
-
 .BlogButton {
     padding: 15px 30px;
     line-height: 1;

@@ -8,7 +8,7 @@ interface Props {
 
 const BlogButton: React.FC<Props> = ({ }) => {
     return (
-        <div className="BlogButton__Container">
+        <div className="BlogButton__Container flex">
             <Link className="BlogButton" href="/blog">Blog</Link>
         </div>
     )
