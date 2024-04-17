@@ -2,7 +2,6 @@
 import * as React from 'react';
 import CircleWithRotatingText from '../ScrollForMoreButton/ScrollForMoreButton';
 import "./HomeSection.css";
-import SocialHandles from '../SocialHandles/SocialHandles';
 import MyWorkButton from '../MyWorkButton/MyWorkButton';
 import ResumeButton from '../ResumeButton/ResumeButton';
 
@@ -12,7 +11,7 @@ interface Props {
 
 const HomeSection: React.FC<Props> = ({ }) => {
     return (
-        <div className='flex flex-row items-end h-full justify-between'>
+        <div className='flex flex-row items-end h-full justify-between mb-20'>
             <div className='flex flex-col items-start h-full justify-center gap-14 pt-sans pl-20'>
                 <p className='text-xl caption-regular'>Chronic Software Programmer, Web Designer, Cat Petter</p>
 
