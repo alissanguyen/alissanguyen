@@ -1,0 +1,85 @@
+.title-skills {
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  transition: all 400ms ease-in-out;
+  margin: 4rem auto;
+  text-align: center;
+}
+
+.bar {
+  width: 80%;
+  margin: 2em auto;
+  display: flex;
+  align-items: center;
+}
+
+.skill-name {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  margin-right: 1em;
+  width: 100px;
+  text-align: right;
+}
+
+.bar-outer {
+  height: 1.25em;
+  background: #eeeeee;
+  position: relative;
+  border-radius: 0.3em;
+  flex-grow: 1;
+}
+
+.bar-inner {
+  width: 0;
+  height: 1.60em;
+  border-radius: 0.3em;
+  transition: width 2s cubic-bezier(0.19, 1, 0.22, 1);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 0.5em;
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.animate  {
+  animation: bar-fill 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+
+@keyframes bar-fill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: attr(width);
+  }
+}
+.html.w-90 {
+    background: #ff9854;
+  }
+  
+.css.w-75 {
+    background: #e46f16;
+}
+  
+.javascript.w-90 {
+    background: #f38477;
+  }
+  
+.react.w-80 {
+    background: #f8a9a2;
+}
+  
+.typescript.w-70 {
+    background: #f24949;
+}
+  
+.nodejs.w-65 {
+    background: #ea9270;
+  }
+  
+.nextjs.w-85 {
+    background: #f67c90;
+  }
