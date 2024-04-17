@@ -1,20 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap');
 
-.pt-sans .caption-regular {
-    font-family: "PT Sans Caption", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+* {
+  box-sizing: border-box;
 }
-  
-.pt-sans .caption-bold {
-    font-family: "PT Sans Caption", sans-serif;
-    font-weight: 700;
-    font-style: normal;
+
+*::before, *::after {
+  box-sizing: border-box;
 }
+
+html, body {
+  height: 100%;
+}
+
 
 .MainSection {
     overflow: -moz-scrollbars-none;
@@ -23,39 +23,6 @@
     scrollbar-color: transparent;
 }
 
-.gradient-text {
-    /* Fallback: Set a background color. */
-    background-color: red;
-    
-    /* Create the gradient. */
-    background-image: linear-gradient(45deg, #f3ec78, #af4261);
-    
-    /* Set the background size and repeat properties. */
-    background-size: 100%;
-    background-repeat: repeat;
-  
-    /* Use the text as a mask for the background. */
-    /* This will show the gradient as a text color rather than element bg. */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-  }
 
-  #text,
-#letter,
-#pathTextCurved {
-  pointer-events: none;
-}
 
-#letter {
-  text-anchor: middle;
-  alignment-baseline: central;
-  font-size: 50px;
-  font-weight: 100;
-}
 
-#textCurved {
-  font-weight: 900;
-  text-transform: uppercase;
-}
