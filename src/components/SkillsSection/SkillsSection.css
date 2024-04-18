@@ -3,19 +3,17 @@
   text-transform: uppercase;
   letter-spacing: 10px;
   transition: all 400ms ease-in-out;
-  margin: 4rem auto;
   text-align: center;
 }
 
 .bar {
-  width: 80%;
   margin: 2em auto;
   display: flex;
   align-items: center;
 }
 
 .skill-name {
-  font-size: 0.8em;
+  font-size: 1em;
   text-transform: uppercase;
   margin-right: 1em;
   width: 100px;
@@ -23,7 +21,7 @@
 }
 
 .bar-outer {
-  height: 1.25em;
+  height: 1.5em;
   background: #eeeeee;
   position: relative;
   border-radius: 0.3em;
@@ -32,19 +30,20 @@
 
 .bar-inner {
   width: 0;
-  height: 1.60em;
+  height: 1.5em;
   border-radius: 0.3em;
   transition: width 2s cubic-bezier(0.19, 1, 0.22, 1);
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding-right: 0.5em;
-  color: #fff;
-  font-size: 0.8em;
+  color: #000;
+  font-weight: 600;
+  font-size: 1em;
 }
 
 .animate  {
-  animation: bar-fill 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation: bar-fill 4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 }
 
 
@@ -57,29 +56,29 @@
   }
 }
 .html.w-90 {
-    background: #ff9854;
-  }
+  background-image: linear-gradient(45deg, #e22222, #af4261);
+}
   
 .css.w-75 {
-    background: #e46f16;
+  background-image: linear-gradient(45deg, #ffd42b, #de530e);
 }
   
 .javascript.w-90 {
-    background: #f38477;
+    background-image: linear-gradient(45deg, #fa7d6f, #dba504);
   }
   
 .react.w-80 {
-    background: #f8a9a2;
+    background-image: linear-gradient(45deg, #f8a9a2, #ae50e0);
 }
   
 .typescript.w-70 {
-    background: #f24949;
+    background-image: linear-gradient(45deg, #f24949, #f45100ac);
 }
   
 .nodejs.w-65 {
-    background: #ea9270;
-  }
+    background-image: linear-gradient(45deg, #ae50e0, #ff95bc);
+}
   
 .nextjs.w-85 {
-    background: #f67c90;
-  }
+    background-image: linear-gradient(45deg, #f67c90, #e4c180);
+}
