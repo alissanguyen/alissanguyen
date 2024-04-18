@@ -15,7 +15,6 @@ html, body {
   height: 100%;
 }
 
-
 .MainSection {
     overflow: -moz-scrollbars-none;
     overflow: -webkit-scrollbar-none;
@@ -23,6 +22,19 @@ html, body {
     scrollbar-color: transparent;
 }
 
+p[class*="Slogan"] {
+  font-weight: 600;
+  font-size: 5.25rem;
+  line-height: normal;
+}
 
-
-
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input:-internal-autofill-selected {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: white !important; /* Change color based on theme*/
+  background-color: transparent !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
