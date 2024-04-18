@@ -1,0 +1,22 @@
+.NavBar__RouteButton {
+    padding: 10px 30px;
+    border: solid 2px transparent;
+    transition: ease-in-out;
+    transition-duration: 200ms;
+    border-radius: 30px;
+}
+
+.NavBar__RouteButton:hover {
+    transition: ease-in-out;
+    transition-duration: 200ms;
+    border: solid 2px #facc15;
+}
+
+.NavBar__Wrapper {
+    padding: .5rem 2.5rem .5rem 1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s, backdrop-filter 0.3s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    margin-left: 4rem;
+    z-index: 100;
+}
