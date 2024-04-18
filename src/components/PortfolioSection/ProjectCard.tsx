@@ -15,7 +15,7 @@ interface Props {
 
 const ProjectCard: React.FC<Props> = (props) => {
     return (
-        <li className="ProjectCard__Wrapper flex" key={props.project.id}>
+        <li className="ProjectCard__Wrapper flex rounded-2xl" key={props.project.id}>
             <Image src={props.project.thumb} alt="" className='ProjectCard__Image rounded-2xl' />
             <div className="ProjectCard__Description flex flex-col items-start gap-5">
                 <span className="font-medium text-2xl drop-shadow-lg">
