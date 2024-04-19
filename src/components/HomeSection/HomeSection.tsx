@@ -16,7 +16,7 @@ const HomeSection: React.FC<Props> = ({ }) => {
                 <p className='text-xl caption-regular'>Chronic Software Programmer, Web Designer, Cat Petter</p>
 
                 <div className='caption-bold text-9xl flex flex-col items-start gradient-text '>
-                    <span>I'm Alissa Nguyen</span>
+                    <span>I&apos;m Alissa Nguyen</span>
                     <span>Web Developer and </span>
                     <span>Software Engineer.</span>
                 </div>

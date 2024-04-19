@@ -17,7 +17,7 @@ const education = [
         year: '2021 - Current',
         title: "Front-end Engineer & Web Developer",
         by: "at GitHub OpenSource - Seattle, WA",
-        description: "Created multiple software applications with React, NextJS, SSR, and experimental UX patterns. Contributed to several open-source repositories on GitHub including Prisma (a GraphQL ORM) and Apple's password manager repo."
+        description: "Created multiple software applications with React, NextJS, SSR, and experimental UX patterns. Contributed to several open-source repositories on GitHub including Prisma (a GraphQL ORM) and Apple&apos;s password manager repo."
     },
     {
         id: 2,
