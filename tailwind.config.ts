@@ -15,7 +15,7 @@ const config: Config = {
         light: {
           bgPrimary: '#4A90E2',
           bgSecondary: '#171717',
-          text: 'black',
+          textPrimary: 'black',
           textSecondary: '#cdcdcf'
         },
 
