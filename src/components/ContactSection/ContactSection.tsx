@@ -13,7 +13,7 @@ const ContactSection: React.FC<Props> = ({ }) => {
                 <p>Contact</p>
             </div>
             <p className="ContactSection__Slogan gradient-text pb-2 leading-tight">
-                Let's make something <br></br>awesome together!
+                Let&apos;s make something <br></br>awesome together!
             </p>
             <ContactForm />
         </div>

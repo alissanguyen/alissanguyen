@@ -26,7 +26,7 @@ const PublishedSoftware: React.FC<Props> = ({ }) => {
                         <GitHubButton link={"https://github.com/alissanguyen/use-typewriter-hook"} />
                     </div>
                     <span className="italic text-orange-200">React, TypeScript, NPM</span>
-                    <p className="tracking-wide text-lg text-slate-500">Fast, minimal, and customizable React hook to allow developers to easily add a "typewriter-like" animation to their app. Supports customization, while having useful defaults, of typing speed, delay, and a blinking cursor. Works for both client-side rendered and server-side-rendered React apps by supporting ESM and CommonJS via JS environment detection. Receives 40-100 downloads a week.</p>
+                    <p className="tracking-wide text-lg text-slate-500">Fast, minimal, and customizable React hook to allow developers to easily add a &quot;typewriter-like&quot; animation to their app. Supports customization, while having useful defaults, of typing speed, delay, and a blinking cursor. Works for both client-side rendered and server-side-rendered React apps by supporting ESM and CommonJS via JS environment detection. Receives 40-100 downloads a week.</p>
                 </div>
             </div>
         </div>
