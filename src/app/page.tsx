@@ -28,16 +28,11 @@ import * as React from 'react'
 
 export default function Home() {
   const pathname = usePathname();
-  
   const [navbarOpacity, setNavbarOpacity] = React.useState(0);
-
   const elementRef = React.useRef<HTMLDivElement>(null);
 
-  useScrollPosition('index', elementRef);
-  
   React.useEffect(() => {
     const element: HTMLDivElement | null = elementRef.current;
-
     if (element) {
       const onScroll = () => {
         const newScrollOffset = element.scrollTop;
@@ -47,13 +42,25 @@ export default function Home() {
 
       element.addEventListener('scroll', onScroll);
 
-      // Clean up the event listener when the component unmounts or the element changes
-      return () => element.removeEventListener('scroll', onScroll);
+      // Restore scroll position on component mount
+      const savedScrollPosition = localStorage.getItem('scrollPosition_index');
+      if (savedScrollPosition !== null) {
+        element.scrollTop = parseInt(savedScrollPosition, 10);
+      }
+
+      // Save scroll position before page refresh
+      const handleBeforeUnload = () => {
+        localStorage.setItem('scrollPosition_index', element.scrollTop.toString());
+      };
+
+      window.addEventListener('beforeunload', handleBeforeUnload);
+
+      return () => {
+        element.removeEventListener('scroll', onScroll);
+        window.removeEventListener('beforeunload', handleBeforeUnload);
+      };
     }
-
-
-
-  }, [elementRef]);
+  }, []);
 
   return (
     <main className={`h-screen flex items-center justify-between p-20 bg-dark-bgPrimary pb-40`}>
