@@ -1,7 +1,5 @@
 import * as React from 'react';
-import "./AboutMeSection.css"
 import SparkleSVG from '../SparkleSVG';
-import SkillsSection from '../SkillsSection/SkillsSection';
 import FrontEndImage from "../../asset/front-end.png"
 import WebHostingImage from "../../asset/web-hosting.png"
 import DatabaseManagementImage from "../../asset/database-management.png"
@@ -47,16 +45,16 @@ const AboutMeSection: React.FC<Props> = ({ }) => {
             </div>
             <p className="AboutMe__Slogan gradient-text pb-2 leading-tight">Turning complex problems <br></br> into simple design</p>
             <div className="AboutMe__StatsWrapper flex flex-row items-center w-full gap-5 text-dark-textSecondary">
-                <div className="AboutMe__StatItem flex flex-col items-center gap-2 w-full">
-                    <span className="AboutMe__StatNumber text-8xl gradient-text">4+</span>
+                <div className="AboutMe__StatItem flex flex-col items-center gap-2 w-full border-2 border-[rgba(255,241,188,0.489)] rounded-[40px] p-[30px_20px]">
+                    <span className="AboutMe__StatNumber font-extrabold text-8xl gradient-text">4+</span>
                     <span className="text-xl font-semibold">Years of experience</span>
                 </div>
-                <div className="AboutMe__StatItem flex flex-col items-center gap-2 w-full">
-                    <span className="AboutMe__StatNumber text-8xl gradient-text">50+</span>
+                <div className="AboutMe__StatItem flex flex-col items-center gap-2 w-full border-2 border-[rgba(255,241,188,0.489)] rounded-[40px] p-[30px_20px]">
+                    <span className="AboutMe__StatNumber font-extrabold text-8xl gradient-text">50+</span>
                     <span className="text-xl font-semibold">Projects done</span>
                 </div>
-                <div className="AboutMe__StatItem flex flex-col items-center gap-2 w-full">
-                    <span className="AboutMe__StatNumber text-8xl gradient-text">1,250+</span>
+                <div className="AboutMe__StatItem flex flex-col items-center gap-2 w-full border-2 border-[rgba(255,241,188,0.489)] rounded-[40px] p-[30px_20px]">
+                    <span className="AboutMe__StatNumber font-extrabold text-8xl gradient-text">1,250+</span>
                     <span className="text-xl font-semibold">GitHub contributions</span>
                 </div>
             </div>
@@ -94,21 +92,21 @@ const AboutMeSection: React.FC<Props> = ({ }) => {
             <div className='spacer-div h-10'></div>
             <ul className='grid grid-cols-2 gap-10'>
                 {skills.map((skill) => (
-                    <li key={skill.id} className="AboutMe__SkillBubble relative flex flex-col items-start overflow-hidden">
-                    <div className="AboutMe__SkillBubble__Content">
-                      <p className="font-semibold text-3xl text-yellow-500 mb-2">{skill.title}</p>
-                      <p className='font-medium text-xl text-dark-textSecondary'>{skill.description}</p>
-                    </div>
-                    <div className="AboutMe__SkillBubble__ImageWrapper">
-                      {skill.image ? (
-                        <Image
-                          src={skill.image}
-                          alt={skill.title}
-                          className="AboutMe__SkillBubble__Image w-full h-auto"
-                        />
-                      ) : null}
-                    </div>
-                  </li>
+                    <li key={skill.id} className="AboutMe__SkillBubble relative flex flex-col items-start overflow-hidden border-2 border-[rgba(246,237,203,0.719)] rounded-[3rem] pt-12 px-12 pb-0 max-h-[44rem]">
+                        <div className="AboutMe__SkillBubble__Content relative z-[1]">
+                            <p className="font-semibold text-3xl text-yellow-500 mb-2">{skill.title}</p>
+                            <p className='font-medium text-xl text-dark-textSecondary'>{skill.description}</p>
+                        </div>
+                        <div className="AboutMe__SkillBubble__ImageWrapper w-full overflow-hidden">
+                            {skill.image ? (
+                                <Image
+                                    src={skill.image}
+                                    alt={skill.title}
+                                    className="AboutMe__SkillBubble__Image w-full h-auto block"
+                                />
+                            ) : null}
+                        </div>
+                    </li>
                 ))}
             </ul>
         </div>
