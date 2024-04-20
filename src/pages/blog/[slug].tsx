@@ -1,3 +1,4 @@
+import useScrollPosition from '@/hooks/useScrollPosition';
 import * as React from 'react';
 
 interface Props {
@@ -5,9 +6,12 @@ interface Props {
 }
 
 const BlogPostPage: React.FC<Props> = ({ }) => {
- return (
- <div>Individual blog post page</div>
- )
+
+    useScrollPosition('blogPost');
+
+    return (
+        <div>Individual blog post page</div>
+    )
 }
 
 export default BlogPostPage

@@ -8,14 +8,33 @@ import PortfolioSection from "@/components/PortfolioSection/PortfolioSection";
 import ResumeSection from "@/components/ResumeSection/ResumeSection";
 import SidePanel from "@/components/SidePanel/SidePanel";
 import { usePathname } from "next/navigation";
+import useScrollPosition from '../hooks/useScrollPosition';
+
 import * as React from 'react'
+
+/**
+ * TODO LIST:
+ *    1. Add responsive design for mobile
+ *    2. Add dark/light theme for all components and track it in cookie storage
+ *    3. Start pulling blog posts from Contentful
+ *    4. Make resume downloadable
+ *    5. Track scrolling position while user still using the website
+ *    6. Change website logo (tab logo)
+ *    7. Make burger menu
+ *    8. Update social handles hover color
+ *    9. Change font
+ *    10. Integrate GPT into the website (somehow)
+ */
 
 export default function Home() {
   const pathname = usePathname();
+  
   const [navbarOpacity, setNavbarOpacity] = React.useState(0);
 
   const elementRef = React.useRef<HTMLDivElement>(null);
 
+  useScrollPosition('index', elementRef);
+  
   React.useEffect(() => {
     const element: HTMLDivElement | null = elementRef.current;
 
