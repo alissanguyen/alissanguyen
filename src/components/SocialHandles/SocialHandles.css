@@ -67,7 +67,7 @@
   right: 0;
   margin: auto;
   position: absolute;
-  background-color: var(--basic-dark-color);
+  background-color: rgb(255, 170, 0);
   border-radius: var(--border-radius);
 }
 

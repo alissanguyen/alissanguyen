@@ -20,11 +20,8 @@ import { smoothScrollToElement } from "@/utils/scrollAnimationUtil";
  *    4. Make resume downloadable
  *    5. Change website logo (tab logo)
  *    6. Make burger menu
- *    7. Update social handles hover color
- *    8. Change font
- *    9. Integrate GPT into the website (somehow)
+ *    7. Integrate GPT into the website (somehow)
  */
-
 
 // Easing function for smooth scrolling. 
 // Takes a time progress value between 0 and 1 and returns an eased progress value that starts fast and slows down towards the end.
