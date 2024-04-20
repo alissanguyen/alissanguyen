@@ -8,9 +8,9 @@ import PortfolioSection from "@/components/PortfolioSection/PortfolioSection";
 import ResumeSection from "@/components/ResumeSection/ResumeSection";
 import SidePanel from "@/components/SidePanel/SidePanel";
 import { usePathname } from "next/navigation";
-import useScrollPosition from '../hooks/useScrollPosition';
 
 import * as React from 'react'
+import { smoothScrollToElement } from "@/utils/scrollAnimationUtil";
 
 /**
  * TODO LIST:
@@ -18,18 +18,37 @@ import * as React from 'react'
  *    2. Add dark/light theme for all components and track it in cookie storage
  *    3. Start pulling blog posts from Contentful
  *    4. Make resume downloadable
- *    5. Track scrolling position while user still using the website
- *    6. Change website logo (tab logo)
- *    7. Make burger menu
- *    8. Update social handles hover color
- *    9. Change font
- *    10. Integrate GPT into the website (somehow)
+ *    5. Change website logo (tab logo)
+ *    6. Make burger menu
+ *    7. Update social handles hover color
+ *    8. Change font
+ *    9. Integrate GPT into the website (somehow)
  */
+
+
+// Easing function for smooth scrolling. 
+// Takes a time progress value between 0 and 1 and returns an eased progress value that starts fast and slows down towards the end.
+const easeOutCubic = (t: number): number => {
+  return 1 - Math.pow(1 - t, 3);
+};
 
 export default function Home() {
   const pathname = usePathname();
   const [navbarOpacity, setNavbarOpacity] = React.useState(0);
   const elementRef = React.useRef<HTMLDivElement>(null);
+
+  // Restore scroll position smoothly on component mount
+  React.useLayoutEffect(() => {
+    const element: HTMLDivElement | null = elementRef.current;
+    if (element) {
+      const savedScrollPosition = localStorage.getItem('scrollPosition_index');
+      if (savedScrollPosition !== null) {
+        const scrollToPosition = parseInt(savedScrollPosition, 10);
+
+        smoothScrollToElement(element, scrollToPosition);
+      }
+    }
+  }, []);
 
   React.useEffect(() => {
     const element: HTMLDivElement | null = elementRef.current;
@@ -41,12 +60,6 @@ export default function Home() {
       };
 
       element.addEventListener('scroll', onScroll);
-
-      // Restore scroll position on component mount
-      const savedScrollPosition = localStorage.getItem('scrollPosition_index');
-      if (savedScrollPosition !== null) {
-        element.scrollTop = parseInt(savedScrollPosition, 10);
-      }
 
       // Save scroll position before page refresh
       const handleBeforeUnload = () => {
