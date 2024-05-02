@@ -5,9 +5,9 @@ I've been working on a few cool projects lately that combine my passion for web 
 🌐 Currently, I’m building a web application that leverages pre-trained AI models to generate images, perform text generation, and classify images. 
 The app communicates with a local API, which is powered by CloudFlare workers, enabling seamless integration of AI capabilities into the web interface.<br><br>
 
-🚀 While I've been geeking out on AI, I'm also giving my portfolio and blog website a major makeover. I'm updating it with:<br>
-- A sleek new design 🎨<br>
-- Fresh info about my skills and projects 💼<br>
+🚀 While I've been geeking out on AI, I'm also giving my portfolio and blog website a major makeover. I'm updating it with:
+- A sleek new design 🎨
+- Fresh info about my skills and projects 💼
 - New insightful blog posts covering AI, Python, JavaScript, and front-end development 📝<br>
 Through my blog, I aim to explore the latest advancements in AI and provide valuable insights to the developer community.<br><br>
 &nbsp; 📕 __Featured Blog Post:__<br>
